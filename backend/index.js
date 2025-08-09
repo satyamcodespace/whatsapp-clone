@@ -14,7 +14,11 @@ connectDB();
 const app = express();
 
 // Middlewares
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+// CORS ko configure kiya gaya hai taaki frontend se request block na ho
+app.use(cors({
+  origin: "https://whatsapp-clone-ui.onrender.com" // Aapke live frontend ka URL
+}));
+
 app.use(express.json()); // To parse JSON request bodies
 
 // API Routes
