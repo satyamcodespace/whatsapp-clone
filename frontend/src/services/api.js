@@ -1,25 +1,24 @@
+// frontend/src/services/api.js
 import axios from 'axios';
 
-// Create an Axios instance.
+// Create an Axios instance with the base URL of your backend
 const apiClient = axios.create({
-  // Use a relative URL for the baseURL.
-  // This allows Vercel to correctly route API requests in production.
-  baseURL: '/api',
+  baseURL: 'http://localhost:5000/api', // Your backend URL
 });
 
-// Function to fetch the list of all conversations.
+// Function to fetch the list of all conversations
 export const fetchConversations = () => {
   return apiClient.get('/messages/conversations');
 };
 
-// Function to fetch all messages for a specific conversation.
+// Function to fetch all messages for a specific conversation
 export const fetchMessages = (conversationId) => {
   return apiClient.get(`/messages/${conversationId}`);
 };
 
-// Function to post a new message to the backend.
+// Add this to frontend/src/services/api.js
+
+// Function to post a new message to the backend
 export const postMessage = (messageData) => {
   return apiClient.post('/messages', messageData);
 };
-
-export default apiClient;
