@@ -10,3 +10,5 @@ frontend/.env
 
 # Build folder
 /frontend/dist
+
+/vercel.json
