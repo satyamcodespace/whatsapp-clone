@@ -1,11 +1,10 @@
-// backend/controllers/messageController.js
+
 const Message = require('../models/messageModel');
 
-// @desc    Get all unique conversations
-// @route   GET /api/messages/conversations
+
 const getAllConversations = async (req, res) => {
   try {
-    // Use MongoDB Aggregation to get the last message for each conversation
+   
     const conversations = await Message.aggregate([
       // Sort messages by timestamp descending to get the latest first
       { $sort: { timestamp: -1 } },
@@ -49,7 +48,7 @@ const getMessagesByConversationId = async (req, res) => {
   }
 };
 
-//////////
+
 const sendMessage = async (req, res) => {
   try {
     const { conversation_id, wa_id, name, body } = req.body;

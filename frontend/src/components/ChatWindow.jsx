@@ -1,7 +1,6 @@
-// frontend/src/components/ChatWindow.jsx
 import React, { useEffect, useRef } from 'react';
 import MessageBubble from './MessageBubble';
-import MessageInput from './MessageInput'; // Import the MessageInput component
+import MessageInput from './MessageInput'; 
 
 const ChatWindow = ({ conversation, messages, loading, onSendMessage }) => {
   // Create a ref to track the end of the message list

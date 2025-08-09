@@ -1,4 +1,3 @@
-// frontend/src/pages/HomePage.jsx
 import React, { useState, useEffect } from 'react';
 import ChatList from '../components/ChatList';
 import ChatWindow from '../components/ChatWindow';
