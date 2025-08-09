@@ -3,8 +3,8 @@ import axios from 'axios';
 
 // Create an Axios instance with the base URL of your backend
 const apiClient = axios.create({
-  // Yahan apna live Render backend URL paste karein
-  baseURL: 'https://your-backend-api-name.onrender.com/api', // <-- YEH LINE THEEK KARNI HAI
+  // Aapka sahi backend URL daal diya gaya hai
+  baseURL: 'https://whatsapp-clone-api.onrender.com/api', 
 });
 
 // Function to fetch the list of all conversations

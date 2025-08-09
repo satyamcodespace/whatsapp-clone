@@ -16,7 +16,8 @@ const app = express();
 // Middlewares
 // CORS ko configure kiya gaya hai taaki frontend se request block na ho
 app.use(cors({
-  origin: "https://whatsapp-clone-ui.onrender.com" // Aapke live frontend ka URL
+  // Yahan aapke live frontend ka URL hona chahiye
+  origin: "https://whatsapp-clone-ui.onrender.com" 
 }));
 
 app.use(express.json()); // To parse JSON request bodies
